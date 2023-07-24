@@ -27,12 +27,29 @@
                     if (a < b) return -1;
                 });
 
+                var colorCode = ['00','33','66','99','cc','ff']
+                var rand = function(){
+                    return Math.floor((Math.random() * 6))
+                };
+                var randomColor = function(){
+                    var r = colorCode[rand()];
+                    var g = colorCode[rand()];
+                    var b = colorCode[rand()];
+                    return "#"+r+g+b;
+                }
+                
 
                 $("#rcpcard").remove();
                 $(".rounded-circle").remove();
-                for (var i = 0; i < 6; i++)
+                for (var i = 0; i < 6; i++){
 
                     $("#main").append('<span class="rounded-circle">' + lotto[i] + '</span>');
+                    
+                }
+                $(".rounded-circle").each(function(){
+                    $(this).css("background-color",randomColor());
+                })
+                
             })
 
             $("#rcp").click(function () {
