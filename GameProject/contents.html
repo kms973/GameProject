@@ -27,30 +27,30 @@
                     if (a < b) return -1;
                 });
 
-                var colorCode = ['00','33','66','99','cc','ff']
-                var rand = function(){
+                var colorCode = ['00', '33', '66', '99', 'cc', 'ff']
+                var rand = function () {
                     return Math.floor((Math.random() * 6))
                 };
-                var randomColor = function(){
+                var randomColor = function () {
                     var r = colorCode[rand()];
                     var g = colorCode[rand()];
                     var b = colorCode[rand()];
-                    return "#"+r+g+b;
+                    return "#" + r + g + b;
                 }
-                
-                
+
+
 
                 $("#rcpcard").remove();
                 $(".rounded-circle").remove();
-                for (var i = 0; i < 6; i++){
+                for (var i = 0; i < 6; i++) {
 
                     $("#main").append('<span class="rounded-circle">' + lotto[i] + '</span>');
-                    
+
                 }
-                $(".rounded-circle").each(function(){
-                    $(this).css("background-color",randomColor());
+                $(".rounded-circle").each(function () {
+                    $(this).css("background-color", randomColor());
                 })
-                
+
             })
 
             $("#rcp").click(function () {
@@ -82,7 +82,7 @@
                                 .append($('<p id="result" class="card-text">누가이길까?</p>'))
                                 .append($('<div class="btn-group"></div>')
                                     .append('<button type="button" class="btn btn-primary">심판</button>')
-)
+                                )
                             )
 
                         )).append($('<div id="comcard" class="card" style="width:300px"></div>')
@@ -212,11 +212,11 @@
             display: inline-block;
 
             text-align: center;
-            line-height: 5em;
+            line-height: 4em;
             color: aliceblue;
             font-size: 2em;
-            width: 5em;
-            height: 5em;
+            width: 4em;
+            height: 4em;
             margin: 7px;
             background-color: #723535;
         }
